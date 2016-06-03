@@ -38,6 +38,43 @@
     table.production td:nth-child(4) a:hover,table.production td:nth-child(4) a:active{ color: blue; text-decoration: underline; }
     .download a:link, .download a:visited, .download{ color: orange; text-decoration: underline; }
     .download a:hover, .download a:active{ color: purple; text-decoration: underline; }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+    /* Tooltip text w3schools.com/css/css_tooltip.asp */
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        padding: 9px;
+        border-radius: 6px;
+        border-color: red;
+        position: absolute;
+        top: -35px;
+        left: 101%; 
+        z-index: 1;
+    }
+
+    .w_on_b {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .b_on_w {
+        background-color: #fff;
+        color: #333;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
     
  </style>
 </head>
@@ -103,7 +140,12 @@
 </tr>
 <tr>
     <td> Program </td>
-    <td class="download"> <a href="https://github.com/alexxroche/magnet2torrentfile/archive/Release.zip">magnet2torrentfile</a></td>
+    <td class="download"> <a class="direct_download tooltip" data-tip="hover right" title=""
+            href="https://github.com/alexxroche/magnet2torrentfile/archive/Release.zip">
+        <span class="tooltiptext w_on_b">Click to download</span>
+            magnet2torrentfile
+        <span class="tooltiptext b_on_w">This for windows, see source for Linux</span>
+</a></td>
     <td> MIT </td>
     <td> <a href="https://github.com/alexxroche/magnet2torrentfile/">C/C++</a> </td>
     <td> Program to bolt your browser to the Bittorrent on your NAS. Tested on Windows XP, Vista, 7, 8; xfce, lxde, CentOS, Debian, crunchbang linux
@@ -191,6 +233,13 @@ Other things that are either abandoned, ongoing, outlines, rough-sketches, hair-
     <th> Description </th>
 </tr>
 
+<tr>
+    <td> Calender </td>
+    <td> <a href="https://alexxroche.github.io/js-cal/?columns=3">js-cal</a> </td>
+    <td> Alpha </td>
+    <td> <a href="https://github.com/alexxroche/js-cal/">2016</a> </td>
+    <td> a cut-n-paste calender </td>
+</tr>
 <tr>
     <td> Excessively grand Project </td>
     <td> <a href="https://alexxroche.github.io/personal-data-protocol/">Personal Data Protocol</a> </td>
