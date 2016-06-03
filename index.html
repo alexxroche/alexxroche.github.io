@@ -1,15 +1,210 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Can you hear me now? Some example code</title>
  <meta charset="UTF-8">
+ <title>Can you hear me now? Some example code</title>
+ <style>
+    div#example-code-list {
+        width:90%; 
+        margin-top:2%;
+        margin-left:6%;
+    }
+  table {
+    text-align:center; 
+    margin-left:auto; 
+    margin-right:auto; 
+    width:58%;
+        border: 1px solid darkgreen;
+  }
+  table.main tr,td {text-align:left;}
+  table.main tr th, .table-title {background: #060; color:#ff0}
+  table#ongoing_projects tr th {background: #CFC; color:#666}
+  table tr:nth-child(even) {background: #CCC}
+  table tr:nth-child(odd) {background: #FFF}
+    table tr th.licence {width: 4em }
+    div#exposition {
+        text-align:center; 
+        width: 100%;
+    }
+    p.unfinished_explanation {
+        text-align:center; 
+        margin-left:auto;
+        margin-right:auto;
+        width: 26em;
+    }
+    table.production td:nth-child(4) a:link, a:visited{ color: black; text-decoration: none; }
+    table.production td:nth-child(4) a:hover, a:active{ color: blue; text-decoration: underline; }
+    .download a:link, .download a:visited, .download{ color: orange; text-decoration: underline; }
+    .download a:hover, .download a:active{ color: purple; text-decoration: underline; }
+    
+ </style>
 </head>
 <body>
 <div id="example-code-list">
-The first public example is built on d3js.org, (well "built" is an understatement): <a href="http://alexxroche.github.io/geoClock/">geoClock</a>.</p>
+<table id="projects_and_repos" class="main production">
+<caption>
+    <span class="table-title">Ready for Public consumption</span><br>
+    <span class="download">Direct downloads marked like this</span>
+</caption>
+<tr>
+    <th> Category </th>
+    <th> Name </th>
+    <th class="licence"> Licence </th>
+    <th> Languages<br>(source) </th>
+    <th> Description </th>
+</tr>
+<tr>
+    <td> Tool </td>
+    <td> <a href="https://alexxroche.github.io/geoClock/">geoClock</a> </td>
+    <td> <a href="https://opensource.org/licenses/MIT">MIT</a> </td>
+    <td> <a href="https://github.com/alexxroche/geoclock/">HTML, CSS, ECMAscript, d3js.org</a> </td>
+    <td> Built on d3js.org, (well "built" is an understatement; almost entirely d3js.) Designed for a large spare screen on a wall; an informative kinetic piece of art.
+    </td>
+</tr>
+<tr>
+    <td> Game </td>
+    <td> <a href="https://alexxroche.github.io/rsum/">rsum</a> </td>
+    <td> <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0</a> </td>
+    <td> <a href="https://github.com/alexxroche/rsum/">HTML,javascript</a> </td>
+    <td> Mental arithmetic under pressure. </td>
+</tr>
+<tr>
+    <td> Game </td>
+    <td> <a href="https://alexxroche.github.io/Slither.io-bot/">Slither.io Bot</a> </td>
+    <td> <a href="https://github.com/alexxroche/Slither.io-bot/blob/master/LICENSE.md">MPL-2.0</a> </td>
+    <td> <a href="https://github.com/alexxroche/Slither.io-bot/">javascript</a> </td>
+    <td> Assisting you, (cheat) at an idle game. My contribution was to remove the need for some browser extention, so now <b>everyone</b> can cheat. </td>
+</tr>
+<tr>
+    <td> InfoGraphic </td>
+    <td> <a href="https://alexxroche.github.io/danceCLAD/">danceCLAD</a> </td>
+    <td> MIT or <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-by-sa 4.0</a></td>
+    <td> <a href="https://github.com/alexxroche/danceCLAD/">gnuclad, HTML, javascript</a> </td>
+    <td> History of dance as coloured lines </td>
+</tr>
+<tr>
+    <td> InfoGraphic</td>
+    <td> <a href="https://alexxroche.github.io/pdp-map/">pdp-map</a> </td>
+    <td> MIT </td>
+    <td> <a href="https://github.com/alexxroche/pdp-map/">Javascript, CSS </a></td>
+    <td> Example display of a sub-category of Personal Data Protocol. This was used to map the location of all mature trees over 2 meters on a farm.
+    </td>
+</tr>
+
+<tr>
+    <td> Documentation </td>
+    <td> <a href="https://alexxroche.github.io/AutoHotkeyCookbook/">AutoHotkey Cookbook</a> </td>
+    <td> <span id="for_the_code">MIT<span> and <a id="for the text" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0-1.0</a></td>
+    <td> <a href="https://github.com/alexxroche/AutoHotkeyCookbook">HTML, AutoHotkey </a></td>
+    <td> A How-to cut-n-past guide for AutoHotkey.
+    </td>
+</tr>
+<tr>
+    <td> Program </td>
+    <td class="download"> <a href="https://github.com/alexxroche/magnet2torrentfile/archive/Release.zip">magnet2torrentfile</a></td>
+    <td> MIT </td>
+    <td> <a href="https://github.com/alexxroche/magnet2torrentfile/">C/C++</a> </td>
+    <td> Program to bolt your browser to the Bittorrent on your NAS. Tested on Windows XP, Vista, 7, 8; xfce, lxde, CentOS, Debian, crunchbang linux
+    </td>
+</tr>
+</table>
+<br>
+
+<table id="code_repos" class="main source">
+<caption>
+  <b>
+    The following are more specialised or aimed at Sysadmin or programmers<br>
+  </b>
+    <br>
+</caption>
+<tr>
+    <th> Category </th>
+    <th> Name </th>
+    <th class="licence"> Licence </th>
+    <th> Languages </th>
+    <th> Description </th>
+</tr>
+
+<tr id="magnus_opus">
+    <td> Website Framework </td>
+    <td> <a href="https://github.com/alexxroche/Notice/">Notice</a> </td>
+    <td> EPL-1.0 or the Artistic License, Version 2.0</td>
+    <td> Perl, <a herf="http://template-toolkit.org/">TT2</a>, sql, ORM, HTML, CSS, js</td>
+    <td> An MVC (DBIC,TT,CAS) CGI::Application Customer Resource and Account Manager inspired by C:A:Structured
+    </td>
+</tr>
+<tr>
+    <td> Sysadmin tool</td>
+    <td> <a href="https://github.com/alexxroche/vnc_angel/">VNC_Angle</a> </td>
+    <td> MIT </td>
+    <td> Perl </td>
+    <td> Watch over servers that are encrypted using dm-crypt. When a virtual host with an encrypted file-system goes down, it requires a passphrase. This script runs on a trusted server in a secure location that has no external remote access, (all ports are closed by iptables and protected by SELinux.) 
+    </td>
+</tr>
+<tr>
+    <td> Game Solver </td>
+    <td> <a href="https://github.com/alexxroche/LightsOut/">LightsOut</a> </td>
+    <td> MIT </td>
+    <td> Perl, javascript, Haskell, python </td>
+    <td> Play or Solve the puzzle game LightsOut
+    </td>
+<tr>
+    <td> Sysadmin tool </td>
+    <td> <a href="https://github.com/alexxroche/du-Plus/">du-Plus</a> </td>
+    <td> MIT </td>
+    <td> Bash </td>
+    <td> du+ Know file space usage; to hunt the disk hogs
+    </td>
+<tr>
+    <td> Sysadmin tool </td>
+    <td> <a href="https://github.com/alexxroche/AIF">AIF</a> </td>
+    <td>[Various]</td>
+    <td> Vim, bash, perl, C, others </td>
+    <td> AIF - Alexx' Information Files (Things people ask for or search for; often that person is me.)
+    </td>
+</tr>
+<tr>
+    <td> CPAN </td>
+    <td> <a href="https://metacpan.org/author/ALEXX">Daemon::Whois</a> </td>
+    <td> EPL-1.0</td>
+    <td> Perl </td>
+    <td> Perl Module
+    </td>
+</tr>
+
+</table>
+
+<div id="exposition">
+<p class="unfinished_explanation">
+Other things that are either abandoned, ongoing, outlines, rough-sketches, hair-brained, mad-scientist, paradigm-shattering twaddle or otherwise unfinished.
+</p>
 </div>
-<div id="other">
-    The next thing will be the Personal Data Protocol. A collection of examples of how each and anyone's data may be entered, stored, protected, displayed and shared. (More soon.)
+
+<table id="ongoing_projects">
+<tr>
+    <th> Category </th>
+    <th> Name </th>
+    <th> Status </th>
+    <th> Last Updated </th>
+    <th> Description </th>
+</tr>
+
+<tr>
+    <td> Excessively grand Project </td>
+    <td> <a href="https://alexxroche.github.io/personal-data-protocol/">Personal Data Protocol</a> </td>
+    <td> Mulling it over </td>
+    <td> <a href="https://github.com/alexxroche/personal-data-protocol">A few years ago</a> </td>
+    <td> A collection of examples of how each and anyone's data may be entered, stored, protected, displayed and shared. (More soon.)
+    </td>
+</tr>
+</table>
+<br>
+It should be possible to auto-generate most of this page from github itself... another idea.
+
+</div>
+
+<div id="footer" >
+    Copyright 1998-2016 <span id="Clearly_not_a_web_designer">Alexx Roche</span>. 
 </div>
 </body>
 </html>
